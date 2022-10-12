@@ -1,0 +1,52 @@
+
+import java.util.Scanner;
+
+public class VowelsConsonant {
+
+private static String removeVowels(String s)
+{
+String output="";
+for (int i = 0; i < s.length(); i++) {
+if (s.charAt(i) == 'a' || s.charAt(i) == 'e'
+|| s.charAt(i) == 'i' || s.charAt(i) == 'o'
+|| s.charAt(i) == 'u' || s.charAt(i) == 'A'
+|| s.charAt(i) == 'E' || s.charAt(i) == 'I'
+|| s.charAt(i) == 'O'
+|| s.charAt(i) == 'U') {
+continue;
+}
+else {
+output=output+s.charAt(i);
+}
+}
+return output;
+}
+private static String removeConstant(String s)
+{
+String output="";
+for (int i = 0; i < s.length(); i++) {
+if (s.charAt(i) == 'a' || s.charAt(i) == 'e'
+|| s.charAt(i) == 'i' || s.charAt(i) == 'o'
+|| s.charAt(i) == 'u' || s.charAt(i) == 'A'
+|| s.charAt(i) == 'E' || s.charAt(i) == 'I'
+|| s.charAt(i) == 'O'
+|| s.charAt(i) == 'U') {
+output=output+s.charAt(i);
+
+}
+else {
+continue;
+}
+}
+return output;
+}
+public static void main(String[] args)
+{
+try (Scanner sc = new Scanner(System.in)) {
+	String s = sc.nextLine();
+	String vowels = removeConstant(s);
+	String constant = removeVowels(s);
+	System.out.print(constant+vowels);
+}
+}
+}
