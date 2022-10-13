@@ -1,0 +1,26 @@
+public class AlphaRepeat {
+    
+public static void main(String[] args)
+            {
+                String s = "Women Empowerment";
+                
+                char [] a= s.toCharArray();
+                
+                for(int i=0; i<a.length; i++)
+                {
+                    int CountAlpha=1;
+                    for(int j=i+1; j<a.length; j++)
+                    {
+                        if(a[i]==a[j])
+                        {
+                            CountAlpha++;
+                           
+                        }
+                        
+                    }
+                    if(CountAlpha > 1)
+                    {
+                        System.out.println(a[i]+"  no:- "+CountAlpha);
+                    }
+                }
+            }
